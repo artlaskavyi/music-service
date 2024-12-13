@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Service Home</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <h1>Welcome to Our Music Service</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/auth/login">Login</a>
+    <a href="/auth/signup">Sign Up</a>
+    <a href="/search.html">Search</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero-section">
+    <h2>Your music, your way</h2>
+    <div class="gif-container">
+      <img src="/images/mygif.webp" alt="Music GIF" id="musicGif">
+    </div>
+  </section>
+
+  <section class="search-section">
+    <h2>Search for Music</h2>
+    <form id="searchForm" onsubmit="redirectToSearch(event)">
+      <input type="text" id="searchInput" name="query" placeholder="Search for albums, artists..." required>
+      <button type="submit" id="searchButton">Search</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 Music Service. All rights reserved.</p>
+</footer>
+
+<script>
+  // JavaScript function to handle form submission and redirect with query
+  function redirectToSearch(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+    const query = document.getElementById('searchInput').value.trim(); // Get the query input value
+    if (query) {
+      // Redirect to search.html with the query parameter in the URL
+      window.location.href = `/search.html?query=${encodeURIComponent(query)}`;
+    }
+  }
+</script>
+</body>
+</html>

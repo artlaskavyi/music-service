@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Admin Dashboard</h1>
+<button onclick="redirectTo('/admin/add-entity')">Add New Entity</button>
+<button onclick="redirectTo('/admin/edit-entity')">Edit Entity</button>
+<button onclick="redirectTo('/admin/delete-entity')">Delete Entity</button>
+
+<script>
+  function redirectTo(path) {
+    window.location.href = path;
+  }
+</script>
+</body>
+</html>

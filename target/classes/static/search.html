@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <h1>Search Results</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/auth/login">Login</a>
+    <a href="/auth/signup">Sign Up</a>
+  </nav>
+</header>
+
+<main>
+  <section class="search-section">
+    <h2>Search for Music</h2>
+    <form id="searchForm" action="/search" method="get">
+      <input type="text" id="searchInput" name="query" placeholder="Search for albums, artists..." required>
+      <button type="submit" id="searchButton">Search</button>
+    </form>
+  </section>
+
+  <section class="search-results-section">
+    <h2>Results for: <span id="searchQuery"></span></h2>
+    <div id="resultsContainer"></div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 Music Service. All rights reserved.</p>
+</footer>
+
+<script src="/js/search.js"></script>
+</body>
+</html>
